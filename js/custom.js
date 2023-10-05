@@ -31,12 +31,50 @@ $(".owl-carousel").owlCarousel({
     }
 });
 
-/** google_map js **/
 
-function myMap() {
-    var mapProp = {
-        center: new google.maps.LatLng(40.712775, -74.005973),
-        zoom: 18,
-    };
-    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggle-services");
+    const additionalServiceBoxes = document.querySelectorAll(".additional-service-box");
+  
+    let isExpanded = false;
+  
+    toggleButton.addEventListener("click", function (e) {
+      e.preventDefault();
+  
+      if (isExpanded) {
+        // Hide additional service boxes with animation
+        additionalServiceBoxes.forEach(function (box) {
+          box.classList.remove("revealed");
+        });
+        toggleButton.textContent = "View More";
+      } else {
+        // Show additional service boxes with animation
+        additionalServiceBoxes.forEach(function (box) {
+          box.classList.add("revealed");
+        });
+        toggleButton.textContent = "View Less";
+      }
+  
+      isExpanded = !isExpanded;
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const openPopupButton = document.getElementById("open-popup");
+    const closePopupButton = document.getElementById("close-popup");
+    const popup = document.getElementById("popup");
+  
+    // Show the popup and apply the class when "Read More" is clicked
+    openPopupButton.addEventListener("click", function () {
+      popup.style.display = "block";
+      document.body.classList.add("popup-opened");
+    });
+  
+    // Close the popup and remove the class when "Close" is clicked
+    closePopupButton.addEventListener("click", function () {
+      popup.style.display = "none";
+      document.body.classList.remove("popup-opened");
+    });
+  });
+  
+  
