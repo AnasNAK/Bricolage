@@ -25,7 +25,7 @@
                 <div class="container-fluid">
                     <nav class="navbar navbar-expand-lg custom_nav-container ">
                         <a class="navbar-brand" href="index.html">
-                            <img src="/images/brico-logo.png" alt="BricoCraft">
+                            <img class="img-logo" src="/images/brico-logo.png" alt="BricoCraft">
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -65,7 +65,7 @@
                     <h2> Our Services </h2>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6 col-md-4 mx-auto">
+                    <div class="col-sm-6 col-md-4 mx-auto service-box">
                         <div class="box ">
                             <div class="img-box">
                                 <img src="images/s1.png" alt="" />
@@ -81,7 +81,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 mx-auto">
+                    <div class="col-sm-6 col-md-4 mx-auto service-box">
                         <div class="box ">
                             <div class="img-box">
                                 <img src="images/s2.png" alt="" />
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 mx-auto">
+                    <div class="col-sm-6 col-md-4 mx-auto service-box">
                         <div class="box ">
                             <div class="img-box">
                                 <img src="images/s3.png" alt="" />
@@ -113,9 +113,60 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-sm-6 col-md-4 mx-auto service-box additional-service-box">
+                        <div class="box ">
+                            <div class="img-box">
+                                <img src="images/car-mintenance.png" alt="" />
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                   Car Fixing
+                                </h5>
+                                <p>
+                                    when looking at its layout. The point of using Lorem Ipsum is
+                                    that it has a more-or-less normal
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mx-auto service-box additional-service-box">
+                        <div class="box ">
+                            <div class="img-box">
+                                <img src="images/pint-wall.png" alt="" />
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Pint Houses
+                                </h5>
+                                <p>
+                                    when looking at its layout. The point of using Lorem Ipsum is
+                                    that it has a more-or-less normal
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 mx-auto service-box additional-service-box">
+                        <div class="box ">
+                            <div class="img-box">
+                                <img src="images/mintenance.png" alt="" />
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Recycling Houses
+                                </h5>
+                                <p>
+                                    when looking at its layout. The point of using Lorem Ipsum is
+                                    that it has a more-or-less normal
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
                 <div class="btn-box">
-                    <a href="">
+                    <a id="toggle-services">
                         View More
                     </a>
                 </div>
@@ -268,7 +319,7 @@
                                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                                             </div>
                                             <p>
-                                                Lorem Ipsum is simply dummy text
+                                                Safi,Morocco
                                             </p>
                                         </div>
                                     </a>
@@ -292,7 +343,7 @@
                                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                             </div>
                                             <p>
-                                                anasc00dingX@gmail.com
+                                                anasc00ding@gmail.com
                                             </p>
                                         </div>
                                     </a>
@@ -307,19 +358,19 @@
                     Follow Us
                 </h4>
                 <div class="box">
-                    <a href="">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <a href="https://www.facebook.com/Anas.NAK.07/">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
                     </a>
-                    <a href="">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <a href="https://www.linkedin.com/in/anas-nakhli-31aa83255/">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
                     </a>
-                    <a href="">
-                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                    <a href="https://github.com/AnasNAK">
+                      <i class="fa fa-github" aria-hidden="true"></i>
                     </a>
-                    <a href="">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <a href="https://www.instagram.com/anas__nak/">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
                     </a>
-                </div>
+                  </div>
             </div>
         </section>
         <footer class="footer_section">
@@ -330,15 +381,16 @@
                 </p>
             </div>
         </footer>
-        <!-- footer section -->
+    </div>
+    <!-- footer section -->
 
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-        </script>
-        <script src="js/custom.js"></script>
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <script src="js/custom.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
 
 
 </body>
