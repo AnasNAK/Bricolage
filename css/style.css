@@ -71,6 +71,7 @@ body {
 h1,
 h2 {
   font-family: 'Merriweather Sans', sans-serif;
+  color: #0355cc;
 }
 
 a,
@@ -428,9 +429,22 @@ a:focus {
   font-family: 'Merriweather Sans', sans-serif;
   margin-bottom: 0;
 }
+.feature_section .feature_container .box.active {
+  background-color: #ff8a1d;
+  color: #ffffff;
+}
+.feature_section .feature_container .box.active:hover{
 
-.feature_section .feature_container .box:hover, .feature_section .feature_container .box.active {
-  background-color: #ff8d22;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.feature_section .feature_container .box{
+  background-color: #ffffff;
+  color: #000000;
+}
+.feature_section .feature_container .box:hover {
+  background-color: #ff8a1d;
   color: #ffffff;
 }
 
@@ -463,8 +477,8 @@ a:focus {
   font-family: 'Merriweather Sans', sans-serif;
   text-transform: uppercase;
   padding: 10px 45px;
-  background-color: #0355cc;
-  border: 1px solid #0355cc;
+  background-color: #ff8a1d;
+  border: 1px solid #ff8a1d;
   border-radius: 2px;
   color: #ffffff;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -472,7 +486,7 @@ a:focus {
 
 .about_section .detail-box a:hover {
   background-color: transparent;
-  color: #0355cc;
+  color: #ff8a1d;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -568,8 +582,8 @@ a:focus {
   font-family: 'Merriweather Sans', sans-serif;
   text-transform: uppercase;
   padding: 10px 45px;
-  background-color: #0355cc;
-  border: 1px solid #67a4ff;
+  background-color: #ff8a1d;
+  border: 1px solid #ff8a1d;
   border-radius: 5px;
   color: #ffffff;
   margin-top: 15px;
@@ -578,8 +592,8 @@ a:focus {
 }
 
 .popup-content button:hover{
-  color: #000000;
-  background-color: #78aeff;
+  color: #ff8a1d;
+  background-color: transparent;
 }
 
 .detail-box a {
