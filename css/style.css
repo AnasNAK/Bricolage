@@ -2,6 +2,9 @@
 body {
   font-family: 'Lato', sans-serif;
   color: #040000;
+
+    padding-top: 120px;
+
 }
 
 .layout_padding {
@@ -79,9 +82,37 @@ a:focus {
 /*header section*/
 .hero_area {
   position: relative;
-  background-color: #ffffff;
+  background: linear-gradient(140deg, #ffffff, #f0f6ff, #d1e3ff);
   margin-bottom: 2rem;
 }
+.img-logo{
+  width:10rem;
+}
+
+.additional-service-box {
+  display: none;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+
+.additional-service-box.revealed {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.header_section {
+  position: fixed; 
+  top: 0;
+  width: 100%; 
+  z-index: 1000; 
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
 
 .header_section .container-fluid {
   padding-right: 25px;
@@ -100,6 +131,7 @@ a:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+
 }
 
 .header_section .header_top .contact_nav a {
@@ -318,11 +350,13 @@ a:focus {
   border-radius: 5px;
   color: #ffffff;
   margin-top: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .slider_section .detail-box a:hover {
   background-color: transparent;
   color: #ff8a1d;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .slider_section .img-box img {
@@ -376,11 +410,16 @@ a:focus {
   max-height: 100%;
   fill: #726dae;
   -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  transition:  0.3s;
+  transform: scale(1.1);
+  border-radius: 1rem;
+}
+.feature_section .feature_container .box:hover {
+  transform: scale(1.2); /* Adjust the scale value as needed for your desired zoom level */
 }
 
 .feature_section .feature_container .box .img-box svg path {
-  fill: #726dae;
+  fill: #000000;
 }
 
 .feature_section .feature_container .box .name {
@@ -391,7 +430,7 @@ a:focus {
 }
 
 .feature_section .feature_container .box:hover, .feature_section .feature_container .box.active {
-  background-color: #ff8a1d;
+  background-color: #ff8d22;
   color: #ffffff;
 }
 
@@ -428,11 +467,13 @@ a:focus {
   border: 1px solid #0355cc;
   border-radius: 2px;
   color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .about_section .detail-box a:hover {
   background-color: transparent;
   color: #0355cc;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .about_section .img-box img {
@@ -473,16 +514,86 @@ a:focus {
   border: 1px solid #ff8a1d;
   border-radius: 2px;
   color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .professional_section .detail-box a:hover {
   background-color: transparent;
   color: #ff8a1d;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .service_section {
   position: relative;
 }
+
+
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding-top: 100%;
+  padding-bottom: 100%;
+  padding-left: 70%;
+  padding-right: 110%;
+  text-align: start;
+  border-radius: 5px;
+  box-shadow: 0 0 10px;
+  
+}
+
+.popup.opened {
+  display: block; 
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  text-align: start;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 80vh;
+}
+.popup-content button{
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Merriweather Sans', sans-serif;
+  text-transform: uppercase;
+  padding: 10px 45px;
+  background-color: #0355cc;
+  border: 1px solid #67a4ff;
+  border-radius: 5px;
+  color: #ffffff;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.popup-content button:hover{
+  color: #000000;
+  background-color: #78aeff;
+}
+
+.detail-box a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #3a88fe;
+}
+
+.detail-box a:hover {
+  color: #1e62d0;
+}
+
+
+
 
 .service_section .box {
   margin-top: 30px;
@@ -544,7 +655,7 @@ a:focus {
 
 .service_section .box:hover .img-box img {
   -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
+          filter: brightness(50%) invert(1);
 }
 
 .service_section .btn-box {
@@ -564,13 +675,17 @@ a:focus {
   padding: 10px 45px;
   background-color: #0355cc;
   border: 1px solid #0355cc;
-  border-radius: 0;
+  border-radius: 0.5rem;
   color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
 .service_section .btn-box a:hover {
-  background-color: transparent;
-  color: #0355cc;
+  background-color: #ddeaff ;
+  color: #3a88fe;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
 }
 
 .client_section .heading_container {
@@ -645,10 +760,21 @@ a:focus {
 .client_section .owl-carousel .owl-nav button {
   width: 50px;
   height: 50px;
-  background-color: #0355cc;
+  background-color: #4a93ff;
   outline: none;
   margin: 0 20px;
   color: #ffffff;
+  margin-bottom: 1rem;
+  border-radius: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.client_section .owl-carousel .owl-nav button:hover {
+  background-color: #b0d0ff;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.flesh{
+  border-radius: 1rem;
 }
 
 .heading_container {
@@ -663,7 +789,7 @@ a:focus {
   padding-left: 25px;
   background-color: #ffffff;
   outline: none;
-  color: #ffffff;
+  color: #000000;
   -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
 }
@@ -696,14 +822,17 @@ a:focus {
   padding: 10px 55px;
   background-color: #0355cc;
   border: 1px solid #0355cc;
-  border-radius: 0;
+  border-radius: 5px;
   color: #ffffff;
   margin-top: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
 .contact_section button:hover {
-  background-color: transparent;
-  color: #0355cc;
+  background-color: #a2c7ff;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contact_section .map_container {
@@ -802,7 +931,7 @@ a:focus {
 }
 
 .info_items .item:hover .img-box {
-  background-color: #ff8a1d;
+  background-color: #fc902b;
 }
 
 .info_items {
